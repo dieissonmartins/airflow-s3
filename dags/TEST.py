@@ -12,10 +12,10 @@ dag = DAG(
     "TEST",
     description="Test execução DAGs deploy S3",
     default_args=default_args,
-    schedule="*/1 * * * *",
+    schedule="*/5 * * * *",
     tags=['Github Actions', 's3'],
     catchup=False,
-    start_date=datetime(2023, 4, 26)
+    start_date=datetime(2024, 1, 1)
 )
 
 
