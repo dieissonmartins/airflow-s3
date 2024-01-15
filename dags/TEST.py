@@ -20,7 +20,7 @@ dag = DAG(
 
 
 def run():
-    print('runting process...')
+    print('Executando Test...')
 
 
 run = PythonOperator(
