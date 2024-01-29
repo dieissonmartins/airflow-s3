@@ -11,7 +11,7 @@ php_script_path_on_container = "/scripts/index.php"
 
 # Define your DAG parameters
 default_args = {
-    'owner': 'airflow',
+    'owner': 'Dieisson',
     'start_date': datetime(2024, 1, 1),
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
