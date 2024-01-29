@@ -20,7 +20,7 @@ default_args = {
 dag = DAG(
     'ecs_php_script_dag',
     default_args=default_args,
-    schedule_interval='@daily',  # You can adjust the schedule as needed
+    schedule="*/5 * * * *",  # You can adjust the schedule as needed
 )
 
 # Define your ECS task
