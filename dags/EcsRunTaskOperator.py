@@ -35,7 +35,8 @@ run_task = EcsRunTaskOperator(
             },
         ],
     },
-    network_configuration={"awsvpcConfiguration": {"subnets": ecs_subnets}}
+    network_configuration={"awsvpcConfiguration": {"subnets": ecs_subnets}},
+    dag=dag
 )
 
 run_task
