@@ -36,6 +36,7 @@ run_task = EcsRunTaskOperator(
         ],
     },
     network_configuration={"awsvpcConfiguration": {"subnets": ecs_subnets}},
+    aws_conn_id='aws_conn_ecs',
     dag=dag
 )
 
