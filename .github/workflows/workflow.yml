@@ -2,8 +2,6 @@ name: DAGs CI
 
 on:
   push:
-    paths:
-      - '**/*.py'
     branches:
       - "main"
 
