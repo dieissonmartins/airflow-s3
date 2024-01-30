@@ -9,8 +9,8 @@ default_args = {
 }
 
 dag = DAG(
-    "TEST",
-    description="Test execução DAGs deploy S3",
+    "PILOT",
+    description="PILOT execução DAGs deploy S3",
     default_args=default_args,
     schedule="*/5 * * * *",
     tags=['Github Actions', 's3'],
@@ -20,7 +20,7 @@ dag = DAG(
 
 
 def run():
-    print('Executando Test...')
+    print('Executando Pilot...')
 
 
 run = PythonOperator(
