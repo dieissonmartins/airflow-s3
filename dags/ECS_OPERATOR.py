@@ -1,12 +1,12 @@
 from datetime import datetime, timedelta
 from airflow import DAG
-from airflow.providers.amazon.operators.ecs_api import ECSOperator
+from airflow.providers.amazon.aws.operators.ecs import ECSOperator
 
 # Define your ECS task parameters
-ecs_task_definition_arn = "4e88e5f4144c42e9910ea994a28eef3f"
+task_definition = "4e88e5f4144c42e9910ea994a28eef3f"
 ecs_cluster = "airflow-ecs"
-ecs_subnets = ["subnet-03e9ed8201ae37039"]
-ecs_security_groups = ["sg-0f2a7cbfdf97d7dd2"]
+#ecs_subnets = ["subnet-03e9ed8201ae37039"]
+#ecs_security_groups = ["sg-0f2a7cbfdf97d7dd2"]
 php_script_path_on_container = "/scripts/index.php"
 
 # Define your DAG parameters
@@ -18,7 +18,7 @@ default_args = {
 }
 
 dag = DAG(
-    'ecs_php_script_dag',
+    'ECS_OPERATOR',
     default_args=default_args,
     schedule="*/5 * * * *",  # You can adjust the schedule as needed
 )
@@ -26,15 +26,8 @@ dag = DAG(
 # Define your ECS task
 ecs_task = ECSOperator(
     task_id='ecs_php_script_task',
-    task_definition=ecs_task_definition_arn,
+    task_definition=task_definition,
     cluster=ecs_cluster,
-    launch_type='FARGATE',  # or 'EC2' based on your setup
-    network_configuration={
-        'awsvpcConfiguration': {
-            'subnets': ecs_subnets,
-            'securityGroups': ecs_security_groups,
-        },
-    },
     overrides={
         'containerOverrides': [
             {
