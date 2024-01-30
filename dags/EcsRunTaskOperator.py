@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.providers.amazon.aws.operators.ecs import EcsRunTaskOperator
-
+from airflow.operators.bash import BashOperator
 
 # Define your ECS task parameters
 task_definition = "4e88e5f4144c42e9910ea994a28eef3f"
