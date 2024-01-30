@@ -90,7 +90,7 @@ def create_dag(dag_id, schedule_interval, tasks):
 
     for task_configuration in tasks.values():
         task_id = task_configuration['task_id']
-        params = task_configuration['params']
+        # params = task_configuration['params']
 
         task = create_task(dag, task_id)
         previous_task >> task
