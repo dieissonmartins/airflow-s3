@@ -20,7 +20,7 @@ default_args = {
 dag = DAG(
     'ECS_RUN_TASK_OPERATOR',
     default_args=default_args,
-    schedule="*/5 * * * *"
+    schedule="3 * * * *"
 )
 
 run_task = EcsRunTaskOperator(
