@@ -27,7 +27,8 @@ run_task = EcsRunTaskOperator(
         'containerOverrides': [
             {
                 'name': 'etl-bhtrans',
-                "command": ["php", "scripts/index.php"],
+                "command": ["ls"],
+                # "command": ["php", "scripts/index.php"],
             },
         ],
     },
