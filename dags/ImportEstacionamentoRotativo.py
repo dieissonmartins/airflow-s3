@@ -27,7 +27,7 @@ run_task = EcsRunTaskOperator(
         'containerOverrides': [
             {
                 'name': 'etl-bhtrans',
-                "command": ["php", "index.php ImportEstacionamentoRotativo"],
+                'command': ["php", "index.php", "ImportEstacionamentoRotativo"],
             },
         ],
     },
