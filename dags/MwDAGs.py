@@ -103,7 +103,8 @@ def create_task(dag, task_id):
     return DummyOperator(task_id=task_id, dag=dag)
 
 
-dags = get_dags()
+#dags = get_dags()
+dags = {}
 
 # Iterate through the configurations and create DAGs
 for dag in dags.values():
