@@ -15,7 +15,7 @@ dag = DAG(
         'retries': 1,
         'retry_delay': timedelta(minutes=5),
     },
-    schedule="@hourly",
+    schedule=None
 )
 
 run_task = EcsRunTaskOperator(
