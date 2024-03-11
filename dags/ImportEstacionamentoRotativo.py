@@ -4,7 +4,7 @@ from airflow.providers.amazon.aws.operators.ecs import EcsRunTaskOperator
 
 # Define your ECS task parameters
 ecs_cluster = "airflow-ecs"
-task_definition = "task-definition-bhtrans:1"
+task_definition = "task-definition-bhtrans:2"
 ecs_subnets = ["subnet-01e897958bf6fe9a5"]
 
 dag = DAG(
