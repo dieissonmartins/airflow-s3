@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.providers.amazon.aws.operators.ecs import EcsRunTaskOperator
 
-# Define your ECS task parameters
+# Define your ECS task parameters 
 ecs_cluster = "generate-pptx"
 task_definition = "spire-presentation-mw-generate-pptx:1"
 ecs_subnets = ["subnet-01e897958bf6fe9a5"]
