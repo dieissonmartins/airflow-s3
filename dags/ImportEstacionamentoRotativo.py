@@ -1,6 +1,6 @@
-from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.providers.amazon.aws.operators.ecs import EcsRunTaskOperator
+from datetime import datetime, timedelta
 
 # Define your ECS task parameters
 ecs_cluster = "airflow-ecs"

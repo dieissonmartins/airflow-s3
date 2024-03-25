@@ -1,7 +1,7 @@
-from datetime import datetime, timedelta
+import mysql.connector
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
-import mysql.connector
+from datetime import datetime, timedelta
 
 
 def get_dags():
