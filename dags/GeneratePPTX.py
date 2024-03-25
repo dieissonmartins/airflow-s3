@@ -4,7 +4,7 @@ from airflow.providers.amazon.aws.operators.ecs import EcsRunTaskOperator
 
 # Define your ECS task parameters
 ecs_cluster = "generate-pptx"
-task_definition = "spire-presentation-mw-generate-pptx:1"
+task_definition = "spire-presentation-mw-generate-pptx:2"
 ecs_subnets = ["subnet-01e897958bf6fe9a5"]
 
 dag = DAG(
