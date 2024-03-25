@@ -27,7 +27,7 @@ run_task = EcsRunTaskOperator(
         'containerOverrides': [
             {
                 'name': 'spire-presentation-mw',
-                "command": ["python", "src/scripts/generate_pptx/main.py"],
+                "command": ["python", "main.py"],
             },
         ],
     },
