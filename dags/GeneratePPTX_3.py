@@ -8,7 +8,7 @@ task_definition = "spire-presentation-mw-generate-pptx:3"
 ecs_subnets = ["subnet-01e897958bf6fe9a5"]
 
 dag = DAG(
-    'GERAR_PPTX_DAG',
+    'GERAR_PPTX_DAG_3',
     default_args={
         'owner': 'Dieisson',
         'start_date': datetime(2024, 3, 11),
@@ -19,7 +19,7 @@ dag = DAG(
 )
 
 run_task = EcsRunTaskOperator(
-    task_id="GERAR_PPTX_DAG",
+    task_id="GERAR_PPTX_DAG_3",
     cluster=ecs_cluster,
     task_definition=task_definition,
     launch_type='FARGATE',
